@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  color: #555;
+}
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #077;
+  color: #fff !important;
+}
+.collapse {
+  margin-left: 500px;
+}
+
+.navbar-toggler {
+  color: #fff !important;
+  border: 2px solid #fff !important;
+}
+.navbar-brand {
+  color: #fff !important;
+}
+.nav-item a {
+  color: #fff !important;
+}
+.signup {
+  padding: 50px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 5px;
+  margin-top: 50px;
+  background-color: rgba(255, 255, 255, 0.86);
+  margin-bottom: 100px;
+}
+.description {
+  padding: 50px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 2px 0px;
+  border-radius: 5px;
+  margin-top: 50px;
+  background-color: rgba(255, 255, 255, 0.86);
+  margin-bottom: 100px;
+}
+.description .signup__container__heading {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: bold;
+  font-size: 30px;
+  color: #555;
+}
+.signup .signup__container__heading {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: bold;
+  font-size: 30px;
+  color: #555;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="date"],
+input[type="password"],
+select {
+  width: 100%;
+  outline-style: none;
+  border-radius: 3px;
+  border-style: none;
+  padding: 5px;
+  border: 1px solid #555;
+}
+.loginbtn {
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 20px;
+  width: 100px;
+  border: 2px solid #077;
+  background: #fff;
+  color: #000;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+  margin-left: 50px;
+}
+.signup__container__form .registerbtn {
+  display: inline-block;
+  margin-top: 20px;
+  width: 150px;
+  background: #077;
+  border-style: none;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+}
+.signup__container__form textarea {
+  width: 100%;
+}
+
+.signup__container__form .send__description {
+  display: inline-block;
+  margin-top: 20px;
+  width: 150px;
+  background: #077;
+  border-style: none;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.signup__container__form h4 {
+  text-align: center;
+  text-transform: capitalize;
+  font-family: bold;
+  font-size: 25px;
+  color: #555;
+}
+
+.btn {
+  background: #fff;
+  color: #000;
+}
+.footer {
+  background-color: #077;
+  color: #fff;
+}
+
+.footer-copyright {
+  text-align: center;
+}
+.form {
+  padding: 20px 200px;
+}
+
+.payment__form {
+  width: 500px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 10px 0px;
+  background-color: rgba(255, 255, 255, 0.86);
+  margin-top: 50px;
+  padding: 20px;
+  margin-bottom: 150px;
+  margin-left: 300px;
+}
+.payment__form div input {
+  width: 100%;
+  outline-style: none;
+  border-radius: 3px;
+  border-style: none;
+  padding: 5px;
+  border: 1px solid #555;
+}
+.payment div:not(:last-child) {
+  margin-bottom: 20px;
+}
+.payment__form div a {
+  display: block;
+  background: orange;
+  width: 200px;
+  border-style: none;
+  padding: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  color: #000;
+}
+
+.payment .signup__container__heading {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: bold;
+  font-size: 30px;
+  color: #555;
+  margin-top: 50px;
+}
+.result__container {
+  margin: 100px 100px 200px 100px;
+}
+.result__container .signup__container__heading {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: bold;
+  font-size: 20px;
+  color: #555;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.result__area {
+  width: 100%;
+  height: max-content;
+  background-color: #5d5d5d2b;
+  padding: 5px;
+}
+.result__area p {
+  text-align: left;
+}
+.thankyou__message h4 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: bold;
+  font-size: 16px;
+  color: #077;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.dropdown-menu {
+  background-color: #077 !important;
+}
+.dropdown-menu .dropdown-item:hover {
+  color: #000 !important;
+}
+.footer__primary__heading {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: bold;
+  font-size: 40px;
+  color: #fff;
+  margin-top: 50px;
+}
+@media (max-width: 768px) {
+  .collapse {
+    margin-left: 0px;
+  }
+  .form {
+    padding: 20px 50px;
+  }
+}
+@media (max-width: 425px) {
+  .collapse {
+    margin-left: 0px;
+  }
+  .form {
+    padding: 20px 50px;
+  }
+  .payment__form {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .payment__form div input {
+    width: 100%;
+  }
+  .result__container {
+    margin: 0px;
+  }
+}
+@media (max-width: 375px) {
+  .collapse {
+    margin-left: 0px;
+  }
+  .form {
+    padding: 20px 50px;
+  }
+  .payment__form {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .payment__form div input {
+    width: 100%;
+  }
+  .result__container {
+    margin: 0px;
+  }
+}
+@media (max-width: 320px) {
+  .collapse {
+    margin-left: 0px;
+  }
+  .form {
+    padding: 20px;
+  }
+  .payment__form {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .payment__form div input {
+    width: 100%;
+  }
+  .result__container {
+    margin: 0px;
+  }
+}

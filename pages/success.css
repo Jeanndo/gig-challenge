@@ -1,0 +1,35 @@
+.success {
+  width: 700px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 5px;
+  margin-top: 210px;
+  background-color: rgba(255, 255, 255, 0.86);
+  margin-bottom: 50px;
+  padding: 50px;
+  text-align: center;
+}
+
+.success h1 {
+  text-transform: capitalize;
+  font-size: 40px;
+  color: #000;
+  margin-bottom: 30px;
+  font-family: tangerine;
+}
+.success h5 {
+  text-transform: capitalize;
+  font-size: 30px;
+  margin-bottom: 50px;
+  font-family: tangerine;
+  color: #555;
+}
+
+.success a {
+  background-color: orange;
+  width: 200px;
+  text-decoration: none;
+  display: inline-block;
+  color: #000;
+  border-radius: 3px;
+  padding: 5px;
+}
