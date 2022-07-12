@@ -172,6 +172,11 @@ body {
 .footer-copyright {
   text-align: center;
 }
+.footer__result {
+  display: block;
+  color: #fff;
+  text-align: center;
+}
 
 @media (max-width: 768px) {
   .form {

@@ -160,8 +160,7 @@ select {
 .payment div:not(:last-child) {
   margin-bottom: 20px;
 }
-.payment__form div a {
-  display: block;
+.payment__form div button {
   background: orange;
   width: 200px;
   border-style: none;
@@ -224,6 +223,17 @@ select {
   font-size: 40px;
   color: #fff;
   margin-top: 50px;
+}
+
+.message__result {
+  display: block;
+  color: #077;
+  text-align: center;
+}
+.footer__result {
+  display: block;
+  color: #fff;
+  text-align: center;
 }
 @media (max-width: 768px) {
   .collapse {

@@ -82,6 +82,7 @@
       </div>
     </nav>
     <div class="container signup">
+      <span id="message__result" class="message__result"></span>
       <h1 class="signup__container__heading">Online treatment.</h1>
       <form>
         <div class="row">
@@ -91,37 +92,51 @@
                 <div>
                   <div><label>First Name</label></div>
 
-                  <input type="text" placeholder="First Name" />
+                  <input type="text" placeholder="First Name" id="firstname" />
                 </div>
                 <div>
                   <div>
                     <label>Middle Name</label>
                   </div>
-                  <input type="text" placeholder="Middle Name" />
+                  <input
+                    type="text"
+                    placeholder="Middle Name"
+                    id="middlename"
+                  />
                 </div>
                 <div>
                   <div>
                     <label>Last Name</label>
                   </div>
-                  <input type="text" placeholder="Last Name" />
+                  <input type="text" placeholder="Last Name" id="lastname" />
                 </div>
                 <div>
                   <div>
                     <label>Phone Number</label>
                   </div>
-                  <input type="number" placeholder="Phone Number" />
+                  <input type="number" placeholder="Phone Number" id="phone" />
                 </div>
                 <div>
                   <div>
                     <label>Email</label>
                   </div>
-                  <input type="email" placeholder="Email" />
+                  <input type="email" placeholder="Email" id="email" />
                 </div>
                 <div>
                   <div>
                     <label>Password</label>
                   </div>
-                  <input type="password" placeholder="password" />
+                  <input type="password" placeholder="password" id="password" />
+                </div>
+                <div>
+                  <div>
+                    <label>Role</label>
+                  </div>
+                  <select id="role">
+                    <option>---select---</option>
+                    <option value="patient">patient</option>
+                    <option value="doctor">doctor</option>
+                  </select>
                 </div>
               </div>
             </div>
@@ -133,45 +148,65 @@
                   <div>
                     <label>Address</label>
                   </div>
-                  <input type="text" placeholder="Address" />
+                  <input type="text" placeholder="Address" id="address" />
                 </div>
                 <div>
                   <div>
                     <label>Nationality</label>
                   </div>
-                  <input type="text" placeholder="Nationality" />
+                  <input
+                    type="text"
+                    placeholder="Nationality"
+                    id="nationality"
+                  />
                 </div>
                 <div>
                   <div>
                     <label>National ID</label>
                   </div>
-                  <input type="number" placeholder="National ID" />
+                  <input
+                    type="number"
+                    placeholder="National ID"
+                    id="nationalID"
+                  />
                 </div>
                 <div>
                   <div>
                     <label>Health Insurance</label>
                   </div>
-                  <input type="number" placeholder="Health Insurance" />
+                  <input
+                    type="text"
+                    placeholder="Health Insurance"
+                    id="insurance"
+                  />
                 </div>
                 <div>
                   <div>
                     <label>Sex</label>
                   </div>
-                  <select>
+                  <select id="sex">
                     <option>--select--</option>
-                    <option>Male</option>
-                    <option>Female</option>
+                    <option value="Male">Male</option>
+                    <option value="female">Female</option>
                   </select>
                 </div>
                 <div>
                   <div>
                     <label>DoB</label>
                   </div>
-
-                  <input type="date" />
+                  <input type="date" id="dateofbirth" />
                 </div>
-                <div>
+                <!-- <div>
                   <a href="./description.html" class="registerbtn">Register</a>
+                </div> -->
+                <div>
+                  <button
+                    type="submit"
+                    class="registerbtn"
+                    id="patientregister"
+                  >
+                    Register
+                  </button>
                 </div>
               </div>
             </div>
@@ -182,43 +217,53 @@
     <footer class="footer" id="contact">
       <div>
         <h2 class="footer__primary__heading">LET'S TALK</h2>
+        <span id="footer__result" class="footer__result"></span>
       </div>
       <div class="contact">
         <form class="form">
           <div class="form-row">
             <div class="form-group col-md-6">
-              <label for="firstname">First Name</label>
-              <input type="text" class="form-control" id="firstname" />
+              <label for="footerfirstname">First Name</label>
+              <input type="text" class="form-control" id="footerfirstname" />
             </div>
             <div class="form-group col-md-6">
-              <label for="lastname">Last Name</label>
-              <input type="text" class="form-control" id="lastname" />
+              <label for="footerlastname">Last Name</label>
+              <input type="text" class="form-control" id="footerlastname" />
             </div>
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
-              <label for="phone">Phone</label>
-              <input type="number" class="form-control" id="phone" />
+              <label for="footerphone">Phone</label>
+              <input type="number" class="form-control" id="footerphone" />
             </div>
             <div class="form-group col-md-6">
-              <label for="subject">Subject</label>
-              <input type="text" class="form-control" id="text" />
+              <label for="footersubject">Subject</label>
+              <input type="text" class="form-control" id="footersubject" />
             </div>
           </div>
           <div class="form-group">
-            <label for="message">Message</label>
+            <label for="footermessage">Message</label>
             <textarea
-              id="message"
+              id="footermessage"
               class="form-control"
               placeholder="your message"
               rows="10"
             ></textarea>
           </div>
-          <button type="submit" class="btn">Send It Please</button>
+          <button type="submit" class="btn" id="contactBtn">
+            Send It Please
+          </button>
         </form>
       </div>
       <div class="footer-copyright">&copy;onlinetreatment 2022</div>
     </footer>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"
+      integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -234,5 +279,7 @@
       integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
       crossorigin="anonymous"
     ></script>
+    <script defer src="./../js/registerPatient.js"></script>
+    <script src="./../js/message.js"></script>
   </body>
 </html>

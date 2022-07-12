@@ -83,6 +83,7 @@
     </nav>
     <div class="container description">
       <h1 class="signup__container__heading">Online treatment.</h1>
+
       <form>
         <div class="row">
           <div class="col-12 treatment__middle__side">
@@ -92,10 +93,22 @@
                   <div>
                     <h4>Describe How you are feeling Here</h4>
                   </div>
-                  <textarea class="decription" rows="15" cols="20"> </textarea>
+                  <span class="message__result" id="result__message"> </span>
+                  <textarea
+                    class="decription"
+                    rows="15"
+                    cols="20"
+                    id="description"
+                  >
+                  </textarea>
                 </div>
                 <div>
-                  <a class="send__description" href="./payment.html">Send</a>
+                  <input type="number" placeholder="phone" id="phone" />
+                </div>
+                <div>
+                  <button class="send__description" id="descriptionBtn">
+                    Send
+                  </button>
                 </div>
               </div>
             </div>
@@ -106,43 +119,53 @@
     <footer class="footer" id="contact">
       <div>
         <h2 class="footer__primary__heading">LET'S TALK</h2>
+        <span id="footer__result" class="footer__result"></span>
       </div>
       <div class="contact">
         <form class="form">
           <div class="form-row">
             <div class="form-group col-md-6">
-              <label for="firstname">First Name</label>
-              <input type="text" class="form-control" id="firstname" />
+              <label for="footerfirstname">First Name</label>
+              <input type="text" class="form-control" id="footerfirstname" />
             </div>
             <div class="form-group col-md-6">
-              <label for="lastname">Last Name</label>
-              <input type="text" class="form-control" id="lastname" />
+              <label for="footerlastname">Last Name</label>
+              <input type="text" class="form-control" id="footerlastname" />
             </div>
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
-              <label for="phone">Phone</label>
-              <input type="number" class="form-control" id="phone" />
+              <label for="footerphone">Phone</label>
+              <input type="number" class="form-control" id="footerphone" />
             </div>
             <div class="form-group col-md-6">
-              <label for="subject">Subject</label>
-              <input type="text" class="form-control" id="text" />
+              <label for="footersubject">Subject</label>
+              <input type="text" class="form-control" id="footersubject" />
             </div>
           </div>
           <div class="form-group">
-            <label for="message">Message</label>
+            <label for="footermessage">Message</label>
             <textarea
-              id="message"
+              id="footermessage"
               class="form-control"
               placeholder="your message"
               rows="10"
             ></textarea>
           </div>
-          <button type="submit" class="btn">Send It Please</button>
+          <button type="submit" class="btn" id="contactBtn">
+            Send It Please
+          </button>
         </form>
       </div>
       <div class="footer-copyright">&copy;onlinetreatment 2022</div>
     </footer>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"
+      integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -158,5 +181,7 @@
       integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
       crossorigin="anonymous"
     ></script>
+    <script src="./../js/message.js"></script>
+    <script src="./../js/description.js"></script>
   </body>
 </html>

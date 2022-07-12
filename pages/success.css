@@ -33,3 +33,8 @@
   border-radius: 3px;
   padding: 5px;
 }
+.footer__result {
+  display: block;
+  color: #fff;
+  text-align: center;
+}

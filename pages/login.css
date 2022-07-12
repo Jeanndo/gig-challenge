@@ -44,8 +44,14 @@ body {
   font-size: 16px;
   font-weight: bold;
 }
+.footer__result {
+  display: block;
+  color: #fff;
+  text-align: center;
+}
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+select {
   width: 100%;
   outline-style: none;
   border-radius: 3px;
