@@ -5,6 +5,9 @@
 // console.log(localStorage.getItem("userInfo"));
 // ToolBar
 
+const LoggedInUser = JSON.parse(localStorage.getItem("user"));
+// console.log(LoggedInUser.doctor.email);
+
 const toolbar = document.getElementById("toolbar");
 const menu = document.getElementById("menu");
 const Secondmenu = document.getElementById("menu1");
@@ -43,10 +46,7 @@ const users = document.getElementById("user__form");
 const dashboardItems = document.getElementById("dashboard__items");
 const dashboard = document.getElementById("dashboard");
 const homeTab = document.getElementById("Home");
-const messageTab = document.getElementById("messageTab");
-const subTab = document.getElementById("subTab");
 const messages = document.getElementById("messages");
-const subscribers = document.getElementById("subscribers");
 
 // SIDE BAR TAB BUTTONS
 
@@ -61,7 +61,7 @@ const sub__button = document.getElementById("sub__button");
 // HIDDING DASHBOARD CONTENTS
 
 users.style.display = "none";
-projectForm.style.display = "none";
+// projectForm.style.display = "none";
 blogForm.style.display = "none";
 messages.style.display = "none";
 subscribers.style.display = "none";
@@ -81,7 +81,7 @@ homeTab.addEventListener("click", (event) => {
 dashboard.addEventListener("click", (event) => {
   event.preventDefault();
   blogForm.style.display = "none";
-  projectForm.style.display = "none";
+  // projectForm.style.display = "none";
   users.style.display = "none";
   messages.style.display = "none";
   subscribers.style.display = "none";
@@ -92,7 +92,7 @@ dashboard.addEventListener("click", (event) => {
 dashboard__button.addEventListener("click", (event) => {
   event.preventDefault();
   blogForm.style.display = "none";
-  projectForm.style.display = "none";
+  // projectForm.style.display = "none";
   dashboardItems.style.display = "block";
   users.style.display = "none";
   messages.style.display = "none";
@@ -102,27 +102,26 @@ dashboard__button.addEventListener("click", (event) => {
 UserTab.addEventListener("click", (event) => {
   event.preventDefault();
   blogForm.style.display = "none";
-  projectForm.style.display = "none";
   dashboardItems.style.display = "none";
   users.style.display = "block";
   messages.style.display = "none";
   subscribers.style.display = "none";
+  // getAllPatientsSigns();
 });
 
 user__button.addEventListener("click", (event) => {
   event.preventDefault();
   blogForm.style.display = "none";
-  projectForm.style.display = "none";
   dashboardItems.style.display = "none";
   users.style.display = "block";
   messages.style.display = "none";
   subscribers.style.display = "none";
+  // getAllPatientsSigns();
 });
 
 BlogTab.addEventListener("click", (event) => {
   event.preventDefault();
   blogForm.style.display = "block";
-  projectForm.style.display = "none";
   dashboardItems.style.display = "none";
   users.style.display = "none";
   messages.style.display = "none";
@@ -132,69 +131,10 @@ BlogTab.addEventListener("click", (event) => {
 blog__button.addEventListener("click", (event) => {
   event.preventDefault();
   blogForm.style.display = "block";
-  projectForm.style.display = "none";
   dashboardItems.style.display = "none";
   users.style.display = "none";
   messages.style.display = "none";
   subscribers.style.display = "none";
-});
-
-ProjectTab.addEventListener("click", (event) => {
-  event.preventDefault();
-  blogForm.style.display = "none";
-  projectForm.style.display = "block";
-  users.style.display = "none";
-  dashboardItems.style.display = "none";
-  messages.style.display = "none";
-  subscribers.style.display = "none";
-});
-
-project__button.addEventListener("click", (event) => {
-  event.preventDefault();
-  blogForm.style.display = "none";
-  projectForm.style.display = "block";
-  users.style.display = "none";
-  dashboardItems.style.display = "none";
-  messages.style.display = "none";
-  subscribers.style.display = "none";
-});
-
-messageTab.addEventListener("click", (event) => {
-  event.preventDefault();
-  blogForm.style.display = "none";
-  projectForm.style.display = "none";
-  users.style.display = "none";
-  dashboardItems.style.display = "none";
-  messages.style.display = "block";
-  subscribers.style.display = "none";
-});
-message__button.addEventListener("click", (event) => {
-  event.preventDefault();
-  blogForm.style.display = "none";
-  projectForm.style.display = "none";
-  users.style.display = "none";
-  dashboardItems.style.display = "none";
-  messages.style.display = "block";
-  subscribers.style.display = "none";
-});
-
-subTab.addEventListener("click", (event) => {
-  event.preventDefault();
-  blogForm.style.display = "none";
-  projectForm.style.display = "none";
-  users.style.display = "none";
-  dashboardItems.style.display = "none";
-  messages.style.display = "none";
-  subscribers.style.display = "block";
-});
-sub__button.addEventListener("click", (event) => {
-  event.preventDefault();
-  blogForm.style.display = "none";
-  projectForm.style.display = "none";
-  users.style.display = "none";
-  dashboardItems.style.display = "none";
-  messages.style.display = "none";
-  subscribers.style.display = "block";
 });
 
 // CREATING A BLOG
@@ -271,4 +211,94 @@ const createProject = async (event) => {
   }
 };
 
-document.getElementById("create__btn").addEventListener("click", createProject);
+// document.getElementById("create__btn").addEventListener("click", createProject);
+
+// DISPLAY ALL PATIENTS VITAL SIGNS
+
+const getAllPatientsSigns = async () => {
+  try {
+    const response = await axios({
+      url: "http://localhost:8000/vitals",
+      method: "GET",
+    });
+    console.log("response", response?.data?.vitals);
+
+    document.getElementById("user__form").innerHTML = response?.data?.vitals
+      .map(
+        (vital) =>
+          `<form> <div class="result__area">
+                    <div class="patientinfo">
+                      <div>
+                        <span>${vital?.patientName}</span>
+                      </div>
+                      <div>
+                        <span>${vital?.patientEmail}</span>
+                      </div>
+                      <div>
+                        <span id="patientPhoneNumber">${
+                          vital?.patientPhone
+                        }</span>
+                      </div>
+                      <div>
+                        <span>${
+                          vital?.payementStatus ? "Paid" : "Not Paid"
+                        }</span>
+                      </div>
+                    </div>
+                    <p>
+                     ${vital?.description}
+                    </p>
+                  </div>
+                  <div>
+                    <textarea
+                      id="response"
+                      rows="20"
+                      class="response"
+                      placeholder="response"
+                    >
+                    
+                  </textarea
+                    >
+                  </div>
+                  <div class="response__action">
+                    <button id="responseBtn">Respond</button>
+                  </div>
+                </form>`
+      )
+      .join("");
+  } catch (error) {
+    console.log(error);
+  }
+  respond();
+};
+getAllPatientsSigns();
+
+// RESPOND TO PATIENT VITAL SIGNS
+
+function respond() {
+  document
+    .getElementById("responseBtn")
+    .addEventListener("click", async (event) => {
+      event.preventDefault();
+
+      try {
+        const phone = document.getElementById("patientPhoneNumber").innerText;
+        const response = document.getElementById("response").value;
+        const LoggedInUser = JSON.parse(localStorage.getItem("user"));
+        // console.log(LoggedInUser.doctor.email);
+        const responseData = await axios({
+          url: "http://localhost:8000/responses",
+          method: "POST",
+          data: {
+            response: response.trim(),
+            email: LoggedInUser?.doctor?.email,
+            patientPhone: phone,
+          },
+        });
+
+        console.log("responseData", responseData);
+      } catch (error) {
+        console.log(error);
+      }
+    });
+}

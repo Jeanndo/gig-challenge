@@ -105,9 +105,7 @@ body {
 .dashboard .dashboard__contents {
   display: flex;
 }
-/* .dashboard .dashboard__contents .side__content__items {
-  padding: 50px 0px;
-} */
+
 .dashboard .dashboard__contents .dashboard__sidebar {
   width: 5%;
   background-color: #464852;
@@ -525,7 +523,7 @@ td span {
 }
 .patientinfo {
   background-color: rgba(255, 255, 255, 0.259);
-  color: #000000;
+  color: #fff;
   display: flex;
   text-align: center;
   justify-content: space-between;
@@ -535,4 +533,11 @@ td span {
 }
 ::placeholder {
   color: #000000;
+}
+.patientdescription {
+  margin: 20px 40px 40px 40px;
+  background: #464852;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+  padding: 20px;
+  border-radius: 3px;
 }

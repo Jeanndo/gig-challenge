@@ -2,11 +2,14 @@ document.getElementById("momopay").addEventListener("click", async (event) => {
   event.preventDefault();
 
   try {
-    let amount = document.getElementById("amount");
-    let phone = document.getElementById("phone");
+    let amount = document.getElementById("amount").value;
+    let phone = document.getElementById("phone").value;
+
+    console.log(amount, phone);
+
     const response = await axios({
       url: "http://localhost:8000/payments/pay",
-      method: "GET",
+      method: "POST",
       data: {
         amount: amount,
         phone: phone,
