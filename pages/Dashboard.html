@@ -7,6 +7,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
@@ -30,8 +36,6 @@
     <link rel="stylesheet" href="./dashboard.css" />
     <title>..:: onlinetreatment ::..</title>
     <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
-
-    <script src="toast.js"></script>
   </head>
   <body>
     <div id="preloader"></div>
@@ -55,12 +59,6 @@
         <div class="dashboard__sidebar" id="sidebar">
           <div class="side__Icons">
             <div>
-              <div id="home__button">
-                <span class="material-icons"> home </span>
-              </div>
-              <div id="dashboard__button">
-                <span class="material-icons dashboard__icon"> dashboard </span>
-              </div>
               <div id="user__button" class="users__notification">
                 <span
                   class="iconify subscribers__icon"
@@ -77,20 +75,6 @@
               </div>
             </div>
             <ul id="list">
-              <li id="Home">
-                <a href="#">
-                  <div class="items__button">
-                    <span class="label">Home</span>
-                  </div>
-                </a>
-              </li>
-              <li id="dashboard">
-                <a href="#">
-                  <div class="items__button">
-                    <span class="label">Dashboard</span>
-                  </div>
-                </a>
-              </li>
               <li id="userTab">
                 <a href="#">
                   <div class="items__button">
@@ -119,7 +103,7 @@
           </div>
           <div id="user__form" class="patientdescription">
             <div class="form__container users">
-              <div class="user__form__container">
+              <div class="user__form__container container">
                 <!-- <form>
                   <div class="result__area">
                     <div class="patientinfo">
@@ -169,52 +153,23 @@
             </div>
           </div>
           <!-- messages -->
-          <div class="create__dashboard__blog" id="blog__form">
-            <div class="form__container">
-              <form
-                method="post"
-                action="/api/v1/blogs"
-                enctype="multipart/form-data"
-              >
-                <div class="text__input__container">
-                  <input type="text" placeholder="Title" required id="Title" />
+          <div class="create__dashboard__blog container" id="message__body">
+            <!-- <div class="form__container">
+              <div class="patient__message_body">
+                <div class="patient__name">
+                  <small>JEAN DE DIEU UKWITEGETSE</small>
                 </div>
-                <div class="text__input__container">
-                  <input
-                    type="file"
-                    required
-                    id="blog__imgurl"
-                    name="blogImage"
-                    multiple="multiple"
-                  />
+                <div class="patient__message__subject">
+                  <small>Subject</small>
                 </div>
-                <textarea
-                  class="blog__description"
-                  name="myTextarea"
-                  id="myTextarea"
-                  required
-                ></textarea>
-                <div class="btn__container">
-                  <button
-                    type="submit"
-                    class="create__btn"
-                    id="create__blog_btn"
-                  >
-                    Create
-                  </button>
-                  <button
-                    type="submit"
-                    class="create__btn update__btn"
-                    id="update__blog_btn"
-                  >
-                    Update
-                  </button>
-                  <span id="uploading__blog__process" class="uplaoding"></span>
+                <div class="patient__message__subject">
+                  <p>Message here please!!</p>
                 </div>
-              </form>
-            </div>
-            <section class="blogs" id="blog"></section>
-            <div id="test"></div>
+              </div>
+              <div class="deleteMsgBtn">
+                <button>Delete</button>
+              </div>
+            </div> -->
           </div>
 
           <div id="messages">
@@ -232,6 +187,21 @@
       integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+      integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+      crossorigin="anonymous"
     ></script>
     <script defer src="./../js/dashboard.js"></script>
   </body>

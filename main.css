@@ -177,7 +177,26 @@ body {
   color: #fff;
   text-align: center;
 }
-
+.working__hours__info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 150px;
+}
+.working__hours__info div a {
+  text-decoration: none;
+  color: #077;
+}
+.working__hours {
+  margin-top: 100px;
+}
+.workhours {
+  width: 100%;
+}
+.workhours img {
+  width: 100%;
+  object-fit: cover;
+}
 @media (max-width: 768px) {
   .form {
     padding: 20px 50px;

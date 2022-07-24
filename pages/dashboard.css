@@ -96,10 +96,11 @@ body {
   background-color: #ffffff;
 }
 .dashboard .dashboard__toolbar .dashboard__toolbar__heading {
+  margin-top: 10px;
   text-align: center;
-  font-size: 48px;
+  font-size: 20px;
   letter-spacing: 5px;
-  font-family: "Tangerine", serif;
+  text-transform: uppercase;
 }
 
 .dashboard .dashboard__contents {
@@ -162,10 +163,24 @@ body {
   padding: 20px;
 }
 .form__container {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 40px;
   background-color: #464852;
   padding: 40px;
   border-radius: 5px;
+}
+.deleteMsgBtn {
+  margin-top: 20px;
+}
+.deleteMsgBtn button {
+  background: #fff;
+  width: 100px;
+  border: none;
+  padding: 5px;
+  border-radius: 3px;
+  color: orangered;
+  cursor: pointer;
 }
 .create__dashboard__blog .text__input__container input {
   width: 100%;
@@ -347,8 +362,9 @@ body {
   margin-top: 5px;
 }
 .subscribers__icon {
-  margin-top: 5px;
+  margin-top: 0px;
 }
+
 .toast {
   position: fixed;
   top: 0;

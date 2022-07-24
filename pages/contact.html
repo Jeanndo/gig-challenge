@@ -13,15 +13,19 @@
       integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;300;400;500;600;700;800;900&family=Open+Sans:wght@300&family=Poppins:wght@300;400;500;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,500&family=Tangerine:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./register.css" />
+    <link rel="stylesheet" href="../main.css" />
   </head>
-  <body>
+  <body style="background-color: rgba(55, 141, 137, 0.199)">
     <nav class="navbar navbar-expand-lg navbar-light">
       <a class="navbar-brand" href="../index.html">ONLINE TREATMENT</a>
       <button
@@ -41,7 +45,7 @@
           style="max-height: 100px"
         >
           <li class="nav-item active">
-            <a class="nav-link" href="../index.html#about"
+            <a class="nav-link" href="../index.html"
               >HOME <span class="sr-only">(current)</span></a
             >
           </li>
@@ -56,10 +60,10 @@
             <a class="nav-link" href="../index.html#usage">USAGE</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../pages/contact.html">CONTACT</a>
+            <a class="nav-link" href="#">CONTACT</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./login.html">LOGIN</a>
+            <a class="nav-link" href="./../pages/login.html">LOGIN</a>
           </li>
 
           <li class="nav-item dropdown">
@@ -74,95 +78,56 @@
               REGISTER
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="./doctor.html">As Doctor</a>
-              <a class="dropdown-item" href="./register.html">As Patient</a>
+              <a class="dropdown-item" href="./../pages/doctor.html"
+                >As Doctor</a
+              >
+              <a class="dropdown-item" href="./../pages/register.html"
+                >As Patient</a
+              >
             </div>
           </li>
         </ul>
       </div>
     </nav>
-    <div class="container description">
-      <h1 class="signup__container__heading">Online treatment.</h1>
-
-      <form>
-        <div class="row">
-          <div class="col-12 treatment__middle__side">
-            <div class="signup__container">
-              <div class="signup__container__form">
-                <div>
-                  <div>
-                    <h4>Describe How you are feeling Here</h4>
-                  </div>
-                  <span class="message__result" id="result__message"> </span>
-                  <textarea
-                    class="decription"
-                    rows="15"
-                    cols="20"
-                    name="description"
-                    id="description"
-                  >
-                  </textarea>
-                </div>
-                <div>
-                  <input type="number" placeholder="phone" id="phone" />
-                </div>
-                <div>
-                  <button class="send__description" id="descriptionBtn">
-                    Send
-                  </button>
-                  <a href="./result.html" class="send__description">
-                    Check Result
-                  </a>
-                </div>
-              </div>
-            </div>
+    <div class="container working__hours">
+      <div class="row">
+        <div class="col-6 col-md-4 workhours">
+          <img src="./../img/doctors.png" alt="working hours" />
+        </div>
+        <div class="col-md-8 working__hours__info">
+          <div>
+            <div><h5>CALL US</h5></div>
+            <div>+(250) 78xxxxxx</div>
+            <div>+(250) 78xxxxxx</div>
+          </div>
+          <div>
+            <div><h5>LOCATION</h5></div>
+            <div>KG 42</div>
+            <div>KICUKIRO, KIMIRONKO</div>
+          </div>
+          <div>
+            <div><h5>BUSINESS HOURS</h5></div>
+            <div>Mon - sun …… 8 am - 8 pm</div>
+            <div>8 pm-5 am closed</div>
+          </div>
+          <div>
+            <div><h5>Follow us</h5></div>
+            <a href="https://www.linkedin.com" target="_blank">
+              <i class="fa fa-linkedin-square" style="font-size: 24px"></i>
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+              <i class="fa fa-facebook-f" style="font-size: 24px"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+              <i class="fa fa-instagram" style="font-size: 24px"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+              <i class="fa fa-twitter" style="font-size: 24px"></i>
+            </a>
           </div>
         </div>
-      </form>
+      </div>
     </div>
-    <footer class="footer" id="contact">
-      <div>
-        <h2 class="footer__primary__heading">LET'S TALK</h2>
-        <span id="footer__result" class="footer__result"></span>
-      </div>
-      <div class="contact">
-        <form class="form">
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <label for="footerfirstname">First Name</label>
-              <input type="text" class="form-control" id="footerfirstname" />
-            </div>
-            <div class="form-group col-md-6">
-              <label for="footerlastname">Last Name</label>
-              <input type="text" class="form-control" id="footerlastname" />
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <label for="footerphone">Phone</label>
-              <input type="number" class="form-control" id="footerphone" />
-            </div>
-            <div class="form-group col-md-6">
-              <label for="footersubject">Subject</label>
-              <input type="text" class="form-control" id="footersubject" />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="footermessage">Message</label>
-            <textarea
-              id="footermessage"
-              class="form-control"
-              placeholder="your message"
-              rows="10"
-            ></textarea>
-          </div>
-          <button type="submit" class="btn" id="contactBtn">
-            Send It Please
-          </button>
-        </form>
-      </div>
-      <div class="footer-copyright">&copy;onlinetreatment 2022</div>
-    </footer>
     <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"
@@ -185,7 +150,5 @@
       integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
       crossorigin="anonymous"
     ></script>
-    <script src="./../js/message.js"></script>
-    <script src="./../js/description.js"></script>
   </body>
 </html>
