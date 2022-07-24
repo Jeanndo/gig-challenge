@@ -97,10 +97,6 @@ blog__button.addEventListener("click", (event) => {
   subscribers.style.display = "none";
 });
 
-// Messages
-
-// document.getElementById("message__body").location.reload(true);
-
 // DISPLAY ALL PATIENTS VITAL SIGNS
 
 const getAllPatientsSigns = async () => {
@@ -153,15 +149,15 @@ const getAllPatientsSigns = async () => {
                 </form>`
       )
       .join("");
+    document
+      .getElementById("responseBtn")
+      .addEventListener("click", async (event) => {
+        event.preventDefault();
+        await respond();
+      });
   } catch (error) {
     console.log(error);
   }
-  document
-    .getElementById("responseBtn")
-    .addEventListener("click", async (event) => {
-      event.preventDefault();
-      respond();
-    });
 };
 getAllPatientsSigns();
 
@@ -242,3 +238,8 @@ async function deleteMessage(msgId) {
     console.log(error);
   }
 }
+
+document.getElementById("logout__btn").addEventListener("click", (event) => {
+  event.preventDefault();
+  location.href = "./../index.html";
+});
